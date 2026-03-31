@@ -19,6 +19,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active">首頁</a></li>
       <li><a href="#transport">交通指引</a></li>
+      <li><a href="#flights">星宇優惠日期</a></li>
       <li><a href="#food">在地美食</a></li>
       <li><a href="#spots">拍照美景</a></li>
       <li><a href="#entertainment">娛樂活動</a></li>
@@ -131,6 +132,95 @@
     </div>
   </section>
 
+
+  <!-- ===================== Flight Deals Section ===================== -->
+  <section class="section" id="flights">
+    <div class="section-header fade-up">
+      <div class="section-badge" style="justify-content:center;">
+        <span class="line"></span>
+        <span class="num">✈️ STARLUX AIRLINES 2026</span>
+        <span class="line"></span>
+      </div>
+      <h2>星宇航空優惠航班</h2>
+      <p>宮古島（下地島）直飛優惠 <strong style="color:#c8956c;font-size:1.3em;">NT$6,813</strong> 起，把握限定日期，飛向宮古藍！</p>
+    </div>
+
+    <div class="flight-panel fade-up">
+      <!-- Departure Toggle -->
+      <div class="flight-toggle">
+        <button class="flight-toggle-btn active" data-city="tpe" id="btn-tpe">
+          <span class="toggle-city">台北出發</span>
+          <span class="toggle-code">TPE → SHI</span>
+        </button>
+        <button class="flight-toggle-btn" data-city="rmq" id="btn-rmq">
+          <span class="toggle-city">台中出發</span>
+          <span class="toggle-code">RMQ → SHI</span>
+        </button>
+      </div>
+
+      <!-- Flight Info Bar -->
+      <div class="flight-info-bar" id="flight-info-bar">
+        <div class="flight-route" id="flight-route-go">
+          <div class="route-time">10:40</div>
+          <div class="route-detail">
+            <span class="route-code" id="route-code-from">TPE</span>
+            <div class="route-line">
+              <span class="route-duration" id="route-duration-go">1小時20分鐘</span>
+              <div class="route-arrow"></div>
+              <span class="route-label">直飛</span>
+            </div>
+            <span class="route-code">SHI</span>
+          </div>
+          <div class="route-time">13:00</div>
+        </div>
+        <div class="flight-route" id="flight-route-return">
+          <div class="route-time" id="return-depart-time">14:00</div>
+          <div class="route-detail">
+            <span class="route-code">SHI</span>
+            <div class="route-line">
+              <span class="route-duration" id="route-duration-return">1小時10分鐘</span>
+              <div class="route-arrow"></div>
+              <span class="route-label">直飛</span>
+            </div>
+            <span class="route-code" id="route-code-to">TPE</span>
+          </div>
+          <div class="route-time" id="return-arrive-time">14:10</div>
+        </div>
+      </div>
+
+      
+      <!-- Reference Image -->
+      <div class="flight-ref-image">
+        <details>
+          <summary class="ref-toggle">📋 點此展開原始優惠資訊圖片（可比對正確性）</summary>
+          <div class="ref-img-wrapper">
+            <img src="images/starlux_schedule_ref.png" alt="STARLUX星宇航空2026年宮古島優惠航班資訊" />
+            <p class="ref-img-caption">資料來源：賴導機票快報  |  星宇航空 STARLUX Airlines</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Type Toggle -->
+      <div class="flight-type-toggle">
+        <button class="type-btn active" data-type="depart" id="btn-depart">🛫 出發日期</button>
+        <button class="type-btn" data-type="return" id="btn-return">🛬 返回日期</button>
+      </div>
+
+      <!-- Calendar Legend -->
+      <div class="cal-legend">
+        <span class="legend-item"><span class="legend-dot legend-dot-blue"></span>可訂購</span>
+        <span class="legend-item"><span class="legend-dot legend-dot-red"></span>國定假日/週末</span>
+        <span class="legend-item"><span class="legend-dot legend-dot-gray"></span>已過期</span>
+        <span class="legend-item"><span class="legend-dot legend-dot-outline"></span>無航班</span>
+      </div>
+
+      <!-- Calendar Grid Container -->
+      <div class="cal-grid-container" id="cal-grid-container">
+        <!-- JS will render monthly calendars here -->
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== Food Section ===================== -->
   <section class="section" id="food">
     <div class="section-header fade-up">
@@ -224,7 +314,7 @@
         </div>
       </div>
 
-      <!-- 椰子蟹 (NEW) -->
+      <!-- 椰子蟹 -->
       <div class="card fade-up">
         <div class="card-image">
           <img src="images/food_coconut_crab.jpg" alt="宮古島椰子蟹">
@@ -232,7 +322,7 @@
         </div>
         <div class="card-body">
           <h3>椰子蟹——南國陸地之王</h3>
-          <p>世界最大的陸生甲殼類，在宮古島的月光下悄然出沒。餐廳主人以水果細心育肥一個月以上，讓蟹肉飽含天然果香。巨螯中的肉質緊實如龍蝦，而那一匙濃郁至極的蟹膏，混入幾滴泡盛，舌尖瞬間綻放的鮮味是整座島嶼最奢侈的秘密。離開宮古島，你再也找不到第二個這樣的夜晚。</p>
+          <p>世界最大的陸生甲殼類，在宮古島的月光下悄然出沒。餐廳主人以水果細心育肥一個月以上，讓蟹肉飽含天然果香。巨螯中的肉質緊實如龍蝦，纖維間湧動著強烈的鮮甜；蟹膏的濃郁更勝頂級海膽——以泡盛酒點綴蟹膏蘸肉，那份厚重而持久的鮮味，是宮古島最極致的味覺符號。</p>
           <div class="card-meta">
             <span class="card-meta-item">📍 海鮮悟空・魚海</span>
             <span class="card-meta-item">💰 ¥5,000~15,000</span>
@@ -240,65 +330,63 @@
         </div>
       </div>
 
-      <!-- 海葡萄 (NEW) -->
+      <!-- 海葡萄 -->
       <div class="card fade-up">
         <div class="card-image">
-          <img src="images/food_sea_grapes.jpg" alt="海葡萄（綠色魚子醬）">
-          <span class="card-tag">翡翠魚子醬</span>
+          <img src="images/food_sea_grapes.jpg" alt="海葡萄">
+          <span class="card-tag">海洋珍珠</span>
         </div>
         <div class="card-body">
-          <h3>海葡萄——翡翠色的海洋寶石</h3>
-          <p>一串串晶瑩剔透的翡翠色小珠，在齒間輕輕一咬，「啵」的一聲迸發出整片亞熱帶海洋的精華。國際美食界封她為「綠色魚子醬」，但她的美遠比名號來得純粹——那是陽光、潮汐與珊瑚礁共同孕育的活的寶石。記住，千萬不要冷藏，唯有常溫的她，才擁有最飽滿的生命力。</p>
+          <h3>翡翠魚子醬——海葡萄</h3>
+          <p>一粒粒翡翠色的小球在齒間爆裂的瞬間，釋放出的是濃縮的亞熱帶海水精華。被國際美食界譽為「綠色魚子醬」的海葡萄，那令人上癮的「啵啵」爆裂感是無可替代的味覺娛樂。切記不可冷藏、不可預先沾醬——唯有常溫與輕蘸，才能守護這來自珊瑚礁海域的翡翠之夢。</p>
           <div class="card-meta">
-            <span class="card-meta-item">📍 各居酒屋・緣之鄉</span>
-            <span class="card-meta-item">🌊 產地直送・常溫限定</span>
+            <span class="card-meta-item">📍 居酒屋・緣之鄉</span>
+            <span class="card-meta-item">💰 ¥500起</span>
           </div>
         </div>
       </div>
 
-      <!-- 島關東煮 & 阿古豬 (NEW) -->
+      <!-- 島關東煮 -->
       <div class="card fade-up">
         <div class="card-image">
-          <img src="images/food_oden.jpg" alt="島關東煮與豬腳">
+          <img src="images/food_oden.jpg" alt="島關東煮">
           <span class="card-tag">深夜食堂</span>
         </div>
         <div class="card-body">
-          <h3>島關東煮 & 阿古豬</h3>
-          <p>午夜的宮古島，走進燈火通明的小店，一鍋咕嘟作響的關東煮正等待著疲憊的旅人。燉煮超過六小時的豬腳已化為琥珀色的膠原蛋白凝脂，入口即化卻餘韻綿長。搭配島產泡盛與沖繩原生阿古豬的涮涮鍋——膽固醇僅一般豬肉四分之一，鮮甜感卻高出數倍——這是南國深夜最溫暖的慰藉。</p>
+          <h3>島關東煮與阿古豬</h3>
+          <p>在宮古島的深夜，一鍋熱氣蒸騰的島關東煮，是旅人最溫暖的歸宿。燉煮超過六小時的豬腳（Tebichi），膠質徹底釋放，入口即化。搭配一杯島嶼泡盛，在昏黃燈光下品味這份琉球式的慢時光。而稀有的阿古豬，膽固醇僅一般豬肉四分之一，清甜鮮美，是島嶼長壽飲食的秘密之一。</p>
           <div class="card-meta">
             <span class="card-meta-item">📍 島おでんたから</span>
-            <span class="card-meta-item">🌙 深夜營業</span>
+            <span class="card-meta-item">💰 ¥1,500起</span>
           </div>
         </div>
       </div>
 
-      <!-- 花生豆腐 & 居酒屋創意料理 (NEW) -->
+      <!-- 花生豆腐 -->
       <div class="card fade-up">
         <div class="card-image">
-          <img src="images/food_jimami.png" alt="花生豆腐（Jimami Tofu）">
-          <span class="card-tag">居酒屋名物</span>
-          <span class="ai-badge">這張是AI生成示意圖</span>
+          <img src="images/food_jimami.png" alt="花生豆腐">
+          <span class="card-tag">琉球小食</span>
         </div>
         <div class="card-body">
-          <h3>花生豆腐 & 居酒屋創意料理</h3>
-          <p>不含一粒黃豆，純粹以花生與澱粉幻化而成的Ｑ彈溫柔——淋上微甜薑汁醬油的那一刻，你會驚歎這份如麻糬般的柔滑竟來自大地最樸實的果實。在島上的創意居酒屋中，墨魚汁炒麵以深邃黑色帶來視覺震撼，串炸師傅將島野菜與時令鮮魚裹上金黃酥衣——每一道菜都是琉球傳統與現代美學的碰撞。</p>
+          <h3>花生豆腐（Jimami Tofu）</h3>
+          <p>一塊看似平凡的白色豆腐，入口卻是意想不到的Q彈與滑順——因為它根本不含大豆。純粹由島產花生與澱粉凝結而成的Jimami Tofu，口感如麻糬般細膩，淋上微甜薑汁醬油，花生的天然油脂在舌尖散開，是琉球料理中最溫柔的開場白。</p>
           <div class="card-meta">
-            <span class="card-meta-item">📍 居酒家でいりぐち・鄉家</span>
-            <span class="card-meta-item">🍶 搭配泡盛最佳</span>
+            <span class="card-meta-item">📍 居酒家でいりぐち・各居酒屋</span>
+            <span class="card-meta-item">💰 ¥400起</span>
           </div>
         </div>
       </div>
 
-      <!-- 炸彈餅 Sata Andagi (NEW - AI Generated) -->
+      <!-- 炸彈餅 Sata Andagi -->
       <div class="card fade-up">
         <div class="card-image">
-          <img src="images/food_sata.png" alt="沖繩炸彈餅（Sata Andagi）">
-          <span class="card-tag">傳統點心</span>
-          <span class="ai-badge">這張是AI生成示意圖</span>
+          <img src="images/food_sata.png" alt="沖繩炸彈餅">
+          <span class="card-tag">島民甜點</span>
         </div>
         <div class="card-body">
-          <h3>炸彈餅 & 傳統甜點</h3>
-          <p>外皮酥脆得像是陽光烘焙過的礁岩，咬開卻是紫薯與黑糖交織的溫柔內裡——沖繩的炸彈餅（Sata Andagi）在伊良部島的老舖中找到了最完美的形態。而同條街上，手工香蕉蛋糕用最質樸的完熟香蕉香氣，悄悄溫暖了每個離島前最後一個午後。這些不起眼的小食，卻是島民世代相傳的甜蜜密語。</p>
+          <h3>炸彈餅與手工香蕉蛋糕</h3>
+          <p>外皮炸至金黃酥脆、內裡保持紫薯或黑糖的濕潤綿密——伊良部島Nakayukui商店的Sata Andagi，是沖繩傳統甜食最樸實也最令人回味的型態。而同條街上，手工香蕉蛋糕用最質樸的完熟香蕉香氣，悄悄溫暖了每個離島前最後一個午後。這些不起眼的小食，卻是島民世代相傳的甜蜜密語。</p>
           <div class="card-meta">
             <span class="card-meta-item">📍 Nakayukui商店・Monte Doll</span>
             <span class="card-meta-item">💰 ¥200起</span>
@@ -317,10 +405,70 @@
         <span class="line"></span>
       </div>
       <h2>絕美拍照景點</h2>
-      <p>從超現實的17END跑道海灘、東洋第一白沙灘，到隨潮汐浮現的幻之島，每一個角落都是攝影師的天然畫布。</p>
+      <p>從超現實的17END跑道海灘、東洋第一白沙灘，到隨潮汐浮現的幻之島，每一個角落都是攝影師的天然畫布。📷 標記為攝影師精選的最佳取景建議。</p>
     </div>
 
     <div class="card-grid">
+      <!-- 伊良部大橋 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/transport_irabu_bridge.jpg" alt="伊良部大橋">
+          <span class="card-tag">海上巨龍</span>
+        </div>
+        <div class="card-body">
+          <h3>伊良部大橋</h3>
+          <p>全長3,540公尺，日本最長的免收費橋樑。橋身為預留航道而設計的中央起伏段，從遠處觀看彷彿一條在波浪中律動的巨龍。自駕穿越時，兩側遼闊的鈷藍海景隨橋身坡度起伏，營造出「在海上飛馳」的幻覺，是宮古島最具動態幾何線條張力的攝影題材。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>牧山展望台、長山之濱</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>上午 10:00 — 下午 2:00</span></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島—伊良部島</span>
+            <span class="card-meta-item">🌊 全長3,540m</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 池間大橋 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/transport_ikema_bridge.jpg" alt="池間大橋">
+          <span class="card-tag">池間藍</span>
+        </div>
+        <div class="card-body">
+          <h3>池間大橋</h3>
+          <p>連接宮古島北端與池間島，橋下海域被公認為「池間藍」的發源地。透明度之高，在橋面上就能直接看見海底礁石與沙地。白色塔身與極具透明感的藍綠色海水形成強烈對比，是捕捉宮古島最純粹色彩的絕佳場域。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>海美來屋頂、世渡崎停車場</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>正午前後（陽光直射海水最透）</span></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島—池間島</span>
+            <span class="card-meta-item">🌊 全長1,425m</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 來間大橋 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/transport_rental_car.jpg" alt="來間大橋">
+          <span class="card-tag">漸層海色</span>
+        </div>
+        <div class="card-body">
+          <h3>來間大橋</h3>
+          <p>全長1,690公尺，連結宮古島與來間島。兩側海水色調層次異常分明，從淺灘的淺青色到深海的深靛藍，呈現完美的色彩梯度。從來間島上的龍宮城展望台俯瞰，大橋就像繫於綠寶石海面上的白色絲帶，搭配對岸前濱海灘的純白弧線，構成宮古島最經典的明信片視角。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>龍宮城展望台、與那霸前濱</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>下午時分（夕照染紅海面）</span></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島—來間島</span>
+            <span class="card-meta-item">🌊 全長1,690m</span>
+          </div>
+        </div>
+      </div>
+
       <!-- 17END -->
       <div class="card fade-up">
         <div class="card-image">
@@ -329,10 +477,14 @@
         </div>
         <div class="card-body">
           <h3>17END 跑道海灘</h3>
-          <p>當巨大的客機掠過頭頂、降落在伸入碧海的跑道上，腳下是透明度超過30公尺的漸層翡翠海水——這不是電影場景，這是17END。退潮時露出的珊瑚礁地毯上，數百面天然潮池如鑲嵌在海岸的鏡子，倒映著最純粹的宮古藍天。在這裡，人造幾何與自然奇蹟完成了一次超現實的碰撞。</p>
+          <p>當巨大的客機掠過頭頂、降落在伸入碧海的跑道上，腳下是透明度超過30公尺的漸層翡翠海水——這不是電影場景，這是17END。退潮時露出的「幻之沙灘」上，數百面天然潮池如鑲嵌在海岸的鏡子。紅色降落導航燈橋與宮古藍海水形成強烈對比色效果，是全球知名的飛機攝影聖地。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>防波堤上（可拍飛機掠過+幻之沙灘）</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>黃昏 17:30–19:30（干潮前後2小時最佳）</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 下地島機場西北端</span>
-            <span class="card-meta-item">🕐 最佳拍攝9:00-11:00</span>
+            <span class="card-meta-item">🚶 需步行前往</span>
           </div>
         </div>
       </div>
@@ -345,7 +497,11 @@
         </div>
         <div class="card-body">
           <h3>與那霸前濱海灘</h3>
-          <p>綿延7公里的純淨珊瑚白沙，海浪輕柔得像嬰兒的呼吸。退潮時的濕沙化為天然鏡面，映照出來間大橋如巨龍橫跨海面的倒影。當夕陽將天空染成玫瑰金，貼地拍攝的人影剪影宛如南美鹽湖的「天空之鏡」——這是東洋最美的海灘，也是宮古島最溫柔的擁抱。</p>
+          <p>綿延7公里的純淨珊瑚白沙，海浪輕柔得像嬰兒的呼吸。極細的粉雪沙質充當天然大型反光板，有效消除人像面部陰影，是拍攝網美照與婚紗照的最佳地點。夕陽時分，餘暉將白沙灘染成夢幻粉紫色，貼地拍攝的人影剪影宛如南美鹽湖的「天空之鏡」。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>以來間大橋為背景，利用透視構建深度空間感</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>夕陽時分（粉紫色天空之鏡）</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 宮古島西南岸</span>
             <span class="card-meta-item">🌅 日落攝影聖地</span>
@@ -361,10 +517,14 @@
         </div>
         <div class="card-body">
           <h3>砂山海灘</h3>
-          <p>翻越一座潔白的沙丘，在登頂的那一刻，極致的蔚藍毫無預警地衝擊你的視覺——這份「先抑後揚」的驚喜，是砂山海灘與你之間的浪漫約定。渾然天成的石灰岩拱門框住碧海與遠方的地平線，彷彿大自然親手為你開啟了一扇通往天堂的窗。</p>
+          <p>翻越一座潔白的沙丘，在登頂的那一刻，極致的蔚藍毫無預警地衝擊你的視覺。渾然天成的石灰岩拱門框住碧海與遠方的地平線，彷彿大自然親手為你開啟了一扇通往天堂的窗。走入拱門下方，由暗處向明亮的海面拍攝，強烈的光比變化與自然相框感，能瞬間提升照片層次。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>拱門下方由暗向亮拍攝 ＆ 砂丘頂端俯拍海灘</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>黃昏 17:30–19:30（彩霞反射暖調氛圍）</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 宮古島北部</span>
-            <span class="card-meta-item">📸 框景構圖聖地</span>
+            <span class="card-meta-item">⚠️ 注意岩石崩落風險</span>
           </div>
         </div>
       </div>
@@ -377,10 +537,14 @@
         </div>
         <div class="card-body">
           <h3>東平安名崎</h3>
-          <p>如同一柄利劍般延伸入海的狹長岬角，在宮古島的最東端迎接每一天的第一道曙光。腳下是1771年大海嘯拋上岸的巨大海嘯石，遠方是矗立於天涯的純白燈塔。當橘紅的朝陽從太平洋的盡頭緩緩升起，你會明白——有些壯闊，是文字永遠無法傳達的。</p>
+          <p>如同一柄利劍般延伸入海的狹長岬角，在宮古島的最東端迎接每一天的第一道曙光。站在燈塔上可獲得360度環繞視野，親眼目睹太平洋與東海在岬角末端交會撞擊出的巨大浪花。春末夏初，成片的麝香百合在海風中綻放，純白花海與巨大海嘯石形成柔與剛的強烈對比。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>東平安名崎燈塔上（360度環繞視野）</span></div>
+            <div class="photo-tip"><span class="tip-icon">🕐</span><span><span class="tip-label">最佳拍攝時段</span>日出 05:30–07:00（低角度暖光、長陰影）</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 宮古島最東端</span>
-            <span class="card-meta-item">🌄 最佳日出觀測點</span>
+            <span class="card-meta-item">🏛️ 國家指定名勝</span>
           </div>
         </div>
       </div>
@@ -393,7 +557,10 @@
         </div>
         <div class="card-body">
           <h3>通池（通り池）</h3>
-          <p>兩個相鄰的巨大圓形水池，池底秘密相通並直達大海深處。凝望那近乎黑色的靛藍，彷彿在窺探地球最深沉的秘密。當陽光垂直射入，深邃的池水閃爍著藍寶石般冷冽而神聖的光澤。這裡是大地的雙眼，靜靜注視著千萬年的潮起潮落。</p>
+          <p>兩個相鄰的巨大圓形水池，池底秘密相通並直達大海深處，形成獨特的溫躍層現象。凝望那近乎黑色的靛藍，彷彿在窺探地球最深沉的秘密。當陽光垂直射入，深邃的池水閃爍著藍寶石般冷冽而神聖的光澤。這裡不僅是風景攝影勝地，更是頂尖潛水員嚮往的探險殿堂。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>高處俯拍，廣角鏡頭將兩座「藍色之眼」與灰白礁石完美融合</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 下地島西岸</span>
             <span class="card-meta-item">🏛️ 國家級名勝</span>
@@ -409,10 +576,32 @@
         </div>
         <div class="card-body">
           <h3>幻之島（尤尼之濱）</h3>
-          <p>她是海洋最詩意的表演——只在退潮時分，一片純白的沙洲悄然浮現於宮古藍的汪洋之中，如同海神遺落的一顆珍珠。每次出現的形狀都不盡相同，站在360度被深藍包圍的盡頭，你會體驗到一種前所未有的、遺世獨立的寧靜與震撼。</p>
+          <p>她是海洋最詩意的表演——只在退潮時分，一片純白的沙洲悄然浮現於宮古藍的汪洋之中。360度完全被藍色海洋與天空環繞的純白空間，沒有任何建築物、沒有任何遮蔽物。從高空俯瞰，沙洲呈現流動的有機形狀，人在中心顯得渺小而孤寂——這是宮古島最震撼的大尺度空間對比。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>空拍機俯瞰（大尺度空間對比）&amp; 沙洲中心360度環景</span></div>
+          </div>
           <div class="card-meta">
             <span class="card-meta-item">📍 宮古島與伊良部島之間</span>
-            <span class="card-meta-item">🚤 需搭船前往</span>
+            <span class="card-meta-item">🚤 需搭船前往・配合潮汐</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 海岸階梯 Sinbiji -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/spot_sinbiji.jpg" alt="海岸階梯 Sinbiji">
+          <span class="card-tag">私房秘境</span>
+        </div>
+        <div class="card-body">
+          <h3>海岸階梯（Sinbiji）</h3>
+          <p>隱藏在伊良部島雜草叢生路徑後方的白色石階，直接通向海洋深處。在當地語言中意為「潮間帶挖掘蛤蜊之處」，因一張宛如「走進大海」的照片而聲名大噪。階梯末端消失在澄澈見底的海水中，低角度拍攝可創造出超現實的、孤獨而唯美的意境——是宮古島最震撼的私房攝影秘境。</p>
+          <div class="photo-tips">
+            <div class="photo-tip"><span class="tip-icon">📷</span><span><span class="tip-label">最佳取景點</span>低角度拍攝（創造消失在大海中的超現實感）</span></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 伊良部島北部（白鳥崎附近）</span>
+            <span class="card-meta-item">⚠️ 無安全設施・注意潮汐</span>
           </div>
         </div>
       </div>
@@ -441,6 +630,7 @@
         <div class="card-body">
           <h3>海龜生態浮潛</h3>
           <p>在宮古島清澈見底的淺海中，一隻綠蠵龜緩緩划動著翅膀般的前肢，從你身旁優雅而從容地游過。這不是水族館的隔窗觀賞，而是在自然的領地中，與這位海洋古老住民最真實、最近距離的溫柔相遇。專業嚮導確保高達99%的驚喜機率，1歲幼兒也能安心參與。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🐢</span><span>遭遇率99%・含免費高畫質攝影・全年可參加</span></div>
           <div class="card-meta">
             <span class="card-meta-item">💰 ¥8,500~11,000</span>
             <span class="card-meta-item">📷 含免費高畫質攝影</span>
@@ -457,9 +647,27 @@
         <div class="card-body">
           <h3>藍寶石洞 & 南瓜洞</h3>
           <p>陽光穿透海水，在石灰岩洞穴的深處折射出如藍寶石般不可思議的夢幻光芒。這是伊良部島海岸線藏在岩壁後的秘密宇宙。更深處的南瓜洞中，數萬年沉積的鐘乳石柱如沉睡的巨人，等待你划著獨木舟前去喚醒。從光到暗，從海到洞，一場穿越地質時間的壯麗冒險。</p>
+          <div class="ent-highlight"><span class="highlight-icon">💎</span><span>鐘乳石洞窟探險・獨木舟穿越・3~4小時深度體驗</span></div>
           <div class="card-meta">
             <span class="card-meta-item">💰 ¥6,900~15,000</span>
             <span class="card-meta-item">⏱️ 3~4小時</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 八重干瀨 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_yabiji.jpg" alt="八重干瀨珊瑚礁">
+          <span class="card-tag">珊瑚大陸</span>
+        </div>
+        <div class="card-body">
+          <h3>八重干瀨珊瑚礁之旅</h3>
+          <p>日本最大規模的珊瑚礁群，被譽為「夢幻的大陸」——八重干瀨位於宮古島北方約6.5公里的外海。搭乘遊艇駛向這片隱沒於海面下的生態寶庫，海水透明度超過30公尺。桌狀珊瑚、軟珊瑚、彩色熱帶魚群與海龜在你身邊悠然穿梭，彷彿潛入一座水下的熱帶雨林。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🪸</span><span>日本最大珊瑚礁群・透明度30m+・遊艇浮潛行程</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島北端約6.5km</span>
+            <span class="card-meta-item">🚤 需搭船前往</span>
           </div>
         </div>
       </div>
@@ -473,9 +681,95 @@
         <div class="card-body">
           <h3>Shigira 海景纜車 & 黃金溫泉</h3>
           <p>坐上沖繩唯一的開放式海景纜車，在毫無玻璃阻隔的微風中，從高處緩緩滑向蔚藍海岸線。然後浸入日本最南端的琥珀色天然溫泉，讓富含鐵質的金黃泉水洗去旅途的疲憊。這是宮古島送給你的一場南國奢華療癒儀式。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🚡</span><span>沖繩唯一海景吊椅・地下1,250m黃金碳酸泉・露天風呂</span></div>
           <div class="card-meta">
             <span class="card-meta-item">🚡 纜車¥500/單程</span>
             <span class="card-meta-item">♨️ 溫泉¥2,000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 海中公園 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_sea_park.jpg" alt="宮古島海中公園">
+          <span class="card-tag">海底探索</span>
+        </div>
+        <div class="card-body">
+          <h3>海中公園 & 博愛號觀光船</h3>
+          <p>不需要換裝、不需要會游泳——走入水深4公尺的海底觀察室，透過24面強化壓克力窗，與野生的熱帶魚、海龜甚至章魚面對面。而「博愛碧海晴天號」半潛水觀光船，則帶你穿越密集的珊瑚礁群，在移動中欣賞水下25公尺深的海底龍宮。最適合親子家庭的海洋初體驗。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🐠</span><span>無須換裝・冬季能見度20-25m・親子友善</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島北部・上野地區</span>
+            <span class="card-meta-item">💰 觀光船¥2,000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 德國文化村 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_german_village.jpg" alt="上野德國文化村">
+          <span class="card-tag">異國冒險</span>
+        </div>
+        <div class="card-body">
+          <h3>上野德國文化村</h3>
+          <p>在南國棕櫚樹下矗立著一座中世紀德國古堡——這不是海市蜃樓，而是為紀念1873年宮古島民義勇救援德國商船的歷史而建。完整複製德國馬克斯堡的城堡建築內，展示著這段跨越國界的救援史詩。KINDER HAUS裡的德國童話世界，更讓孩子們在歐陸氛圍中盡情探索。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🏰</span><span>復刻德國馬克斯堡・博愛紀念館・免費入園</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 上野地區</span>
+            <span class="card-meta-item">🏛️ 歷史文化園區</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 工藝體驗 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_craft_village.png" alt="體驗工藝村">
+          <span class="card-tag">手作體驗</span>
+        </div>
+        <div class="card-body">
+          <h3>體驗工藝村 & 傳統織物</h3>
+          <p>在熱帶植物園內的工藝村，親手捏製屬於自己的守護神獅子（Shisa）、用島嶼海灘的貝殼拼貼相框，或將手帕染成代表宮古藍的靛藍漸層。更深度的旅人，可以在傳統工藝品中心近距離觀察國寶級「宮古上布」的織造過程——這種夏季最高級的和服布料，是島嶼千年工藝智慧的結晶。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🎨</span><span>Shisa陶偶製作・靛藍染色體驗・國寶級宮古上布見學</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 宮古島市熱帶植物園內</span>
+            <span class="card-meta-item">🌧️ 雨天最佳方案</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 高爾夫 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_golf.png" alt="宮古島高爾夫">
+          <span class="card-tag">海景揮桿</span>
+        </div>
+        <div class="card-body">
+          <h3>頂級海景高爾夫</h3>
+          <p>全日本最靠近大海的高爾夫球場群——Emerald Coast的果嶺緊鄰白沙灘，揮桿時彷彿要將球擊入宮古藍之中。Ocean Links東側球道上，野生孔雀偶爾穿梭其間。而Shigira Bay Country Club的全18洞皆可飽覽海景，是將體育競技昇華為視覺盛宴的極致體驗。</p>
+          <div class="ent-highlight"><span class="highlight-icon">⛳</span><span>Emerald Coast ¥17,900起・Ocean Links ¥16,920起・Sasiba Links ¥3,000起</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 島嶼南部・東部</span>
+            <span class="card-meta-item">💰 ¥3,000~17,900起</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 雪鹽體驗 -->
+      <div class="card fade-up">
+        <div class="card-image">
+          <img src="images/ent_snow_salt.png" alt="雪鹽博物館">
+          <span class="card-tag">味覺遊樂場</span>
+        </div>
+        <div class="card-body">
+          <h3>雪鹽博物館 & 味覺探險</h3>
+          <p>宮古島地下海水穿越千年珊瑚礁層，淬鍊出金氏世界紀錄認證「礦物質種類世界第一」的雪鹽。在博物館中觀摩瞬間蒸發乾燥技術後，最令人期待的環節來臨——在雪鹽霜淇淋上自由搭配十幾種調味鹽：島辣椒、洛神花、芥末、黑芝麻……每一種鹹甜交織都是一場味蕾的微型旅行。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🧂</span><span>金氏世界紀錄・免費參觀・10+種調味鹽體驗</span></div>
+          <div class="card-meta">
+            <span class="card-meta-item">📍 西平安名崎附近</span>
+            <span class="card-meta-item">💰 霜淇淋¥350起</span>
           </div>
         </div>
       </div>
@@ -489,6 +783,7 @@
         <div class="card-body">
           <h3>星空導覽 & 夜間叢林探險</h3>
           <p>當最後一抹夕照沉入東海，另一個宮古島才剛甦醒。遠離城市光害的亞熱帶叢林中，銀河如絲帶橫跨整片星穹。手電筒劃破濃密的黑暗，照亮了藏在礁岩間的巨大椰子蟹、背著奇特貝殼的寄居蟹，以及樹冠上靜靜凝視的琉球角鴞。這是一場讓大人重拾童心、讓孩子驚嘆連連的真實版生態尋寶。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🌌</span><span>專業星空人像攝影・椰子蟹生態觀察・銀河長曝光</span></div>
           <div class="card-meta">
             <span class="card-meta-item">💰 成人¥4,900・兒童¥3,900</span>
             <span class="card-meta-item">🌙 日落後出發</span>
@@ -505,9 +800,10 @@
         <div class="card-body">
           <h3>三線琴 LIVE 居酒屋</h3>
           <p>三線琴清脆的撥弦聲迴盪在熱鬧的居酒屋中，歌者以宮古島的方言唱著祖先傳承的旋律。舉杯泡盛、品嚐海葡萄與宮古牛排，當全場在「卡恰西」的歌聲中歡笑起舞——在這一刻，語言的隔閡消融了，你成為了這座島嶼最真實的一部分。</p>
+          <div class="ent-highlight"><span class="highlight-icon">🎵</span><span>推薦：美ら島（分19:00/21:00兩場）・鄉家Goya（每晚7:30）</span></div>
           <div class="card-meta">
-            <span class="card-meta-item">📍 SUPER STAR・西里大通</span>
-            <span class="card-meta-item">🎵 LIVE ¥450</span>
+            <span class="card-meta-item">📍 西里大通・平良市中心</span>
+            <span class="card-meta-item">🎵 LIVE ¥450起</span>
           </div>
         </div>
       </div>
@@ -525,6 +821,7 @@
         <h4>探索</h4>
         <ul>
           <li><a href="#transport">交通指引</a></li>
+          <li><a href="#flights">星宇優惠日期</a></li>
           <li><a href="#food">在地美食</a></li>
           <li><a href="#spots">拍照美景</a></li>
           <li><a href="#entertainment">娛樂活動</a></li>

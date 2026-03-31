@@ -901,6 +901,397 @@ a {
   letter-spacing: 0.03em;
 }
 
+/* Photography Tips Badge */
+.photo-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #fff9e6, #fff3cc);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.photo-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8b6914;
+  line-height: 1.5;
+}
+
+.photo-tip .tip-icon {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.photo-tip .tip-label {
+  background: rgba(240, 192, 64, 0.25);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+/* Entertainment Highlight Badge */
+.ent-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  background: linear-gradient(135deg, #e8f8f2, #d4f0e7);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.78rem;
+  color: var(--teal-dark);
+  line-height: 1.5;
+}
+
+.ent-highlight .highlight-icon {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+
+/* ================================
+   Flight Deals Section
+   ================================ */
+.flight-panel {
+  background: rgba(255,255,255,0.92);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.flight-toggle {
+  display: flex;
+  gap: 0;
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.flight-toggle-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  font-family: inherit;
+}
+
+.flight-toggle-btn.active {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.flight-toggle-btn .toggle-city {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.flight-toggle-btn .toggle-code {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-top: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* Flight route info */
+.flight-info-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #faf6f0, #f5efe6);
+  border-radius: 12px;
+  border: 1px solid rgba(200,149,108,0.2);
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.route-time {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+}
+
+.route-detail {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.route-code {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+}
+
+.route-line {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.route-duration {
+  font-size: 0.65rem;
+  color: #c8956c;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.route-arrow {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c8956c, transparent);
+  position: relative;
+}
+
+.route-arrow::after {
+  content: '✈';
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: #c8956c;
+}
+
+.route-label {
+  font-size: 0.6rem;
+  color: #c8956c;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* Type toggle (depart/return) */
+.flight-type-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.type-btn {
+  padding: 8px 24px;
+  border: 2px solid #e0e0e0;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.type-btn.active {
+  border-color: var(--teal);
+  background: rgba(77, 182, 172, 0.08);
+  color: var(--teal-dark);
+}
+
+.type-btn:hover {
+  border-color: var(--teal);
+}
+
+/* Calendar Legend */
+.cal-legend {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-dot-blue {
+  background: #1a6b8a;
+}
+
+.legend-dot-red {
+  background: #e53935;
+}
+
+.legend-dot-gray {
+  background: #d0d0d0;
+}
+
+.legend-dot-outline {
+  background: transparent;
+  border: 1.5px solid #e0e0e0;
+}
+
+/* Calendar Grid */
+.cal-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.cal-month {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: 1px solid #f0f0f0;
+}
+
+.cal-month-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--charcoal);
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.cal-weekday {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-light);
+  padding: 2px 0;
+}
+
+.cal-weekday:nth-child(6),
+.cal-weekday:nth-child(7) {
+  color: #e53935;
+}
+
+.cal-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cal-day.empty {
+  background: transparent;
+}
+
+.cal-day.no-flight {
+  color: #d5d5d5;
+}
+
+.cal-day.past-flight {
+  background: #e8e8e8;
+  color: #aaa;
+}
+
+.cal-day.future-flight {
+  background: var(--ocean-blue);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(26,107,138,0.3);
+}
+
+.cal-day.future-flight:hover {
+  transform: scale(1.15);
+  box-shadow: 0 3px 10px rgba(26,107,138,0.4);
+}
+
+.cal-day.holiday-flight {
+  background: #e53935;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(229,57,53,0.3);
+}
+
+.cal-day.holiday-flight:hover {
+  transform: scale(1.15);
+  box-shadow: 0 3px 10px rgba(229,57,53,0.4);
+}
+
+.cal-day.past-holiday-flight {
+  background: #f5c4c3;
+  color: #c9706e;
+}
+
+.cal-day.holiday-no-flight {
+  color: #e53935;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flight-info-bar {
+    grid-template-columns: 1fr;
+  }
+  .flight-toggle-btn .toggle-city {
+    font-size: 0.95rem;
+  }
+  .route-time {
+    font-size: 1.1rem;
+  }
+  .cal-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .flight-type-toggle {
+    flex-direction: column;
+    align-items: center;
+  }
+  .type-btn {
+    width: 70%;
+  }
+}
+
 /* Scroll to top */
 .scroll-top {
   position: fixed;
